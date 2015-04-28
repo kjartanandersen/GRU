@@ -2,7 +2,7 @@
 	try {
 		$source = 'mysql:host=tsuts.tskoli.is;dbname=gru_h6_main_database';
 		$user = 'GRU_H6';
-		$password = 'gru';
+		$password = '***';
 
 		# tegund og nafn á server, nafn á db og PHP aðgangur
 		$pdo = new PDO($source, $user, $password);
