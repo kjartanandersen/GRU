@@ -29,13 +29,17 @@ try {
 	password = :password,
 	status = 00';
 	$s = $pdo->prepare($sql);
-
+	if (isset($_REQUEST['username']) and isset($_REQUEST['fullname']) and isset($_REQUEST['password'])) {
 	$s->bindValue(':username',$_POST['username']);
 	$s->bindValue(':fullname',$_POST['fullname']);
 	$s->bindValue(':password',$_POST['password']);
 	$s->Execute();
-	include "takk.php";
 
+}
+	if (isset($_POST['username']) and isset($_POST['fullname']) and isset($_POST['password']))    
+{    
+	include "takk.php";
+}
 } catch (PDOException $e) 
 {
 	$error = 'Error: ' . $e->getMessage();
