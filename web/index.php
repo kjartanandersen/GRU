@@ -12,9 +12,17 @@
 </head>
 <body>
 <?php
-	session_start();
-	include 'form.html.php';
-	include "includes/dbcon.php";		
-	include "includes/innskra.php";
+		
+
+		include 'form.html.php';
+		include 'vidburdir.php';
+		include 'includes/login.php';
+
+		if (isset($_SESSION['login_user'])) {
+			header("location: includes/profile.php");
+		}
+	
+
+
 ?>
 </body>
